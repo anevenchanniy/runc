@@ -89,9 +89,6 @@ following will output a list of processes running in the container:
 		if err := checkArgs(context, 2, minArgs); err != nil {
 			return err
 		}
-		if os.Geteuid() != 0 {
-			return fmt.Errorf("runc should be run as root")
-		}
 		if err := revisePidFile(context); err != nil {
 			return err
 		}

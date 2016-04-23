@@ -212,7 +212,7 @@ container on your host.`,
 		if err := checkNoFile(specConfig); err != nil {
 			return err
 		}
-		data, err := json.MarshalIndent(&spec, "", "\t")
+		data, err := json.MarshalIndent(spec, "", "\t")
 		if err != nil {
 			return err
 		}

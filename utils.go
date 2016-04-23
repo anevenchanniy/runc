@@ -62,9 +62,6 @@ func setupSpec(context *cli.Context) (*specs.Spec, error) {
 	if notifySocket != "" {
 		setupSdNotify(spec, notifySocket)
 	}
-	if os.Geteuid() != 0 {
-		return nil, fmt.Errorf("runc should be run as root")
-	}
 	return spec, nil
 }
 
