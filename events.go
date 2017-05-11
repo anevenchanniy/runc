@@ -108,9 +108,6 @@ information is displayed once every 5 seconds.`,
 		cli.BoolFlag{Name: "stats", Usage: "display the container's stats then exit"},
 	},
 	Action: func(context *cli.Context) error {
-		if err := checkArgs(context, 1, exactArgs); err != nil {
-			return err
-		}
 		container, err := getContainer(context)
 		if err != nil {
 			return err

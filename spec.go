@@ -65,9 +65,6 @@ container on your host.`,
 		},
 	},
 	Action: func(context *cli.Context) error {
-		if err := checkArgs(context, 0, exactArgs); err != nil {
-			return err
-		}
 		spec := specs.Spec{
 			Version: specs.Version,
 			Platform: specs.Platform{

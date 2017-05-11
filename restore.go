@@ -84,9 +84,6 @@ using the runc checkpoint command.`,
 		},
 	},
 	Action: func(context *cli.Context) error {
-		if err := checkArgs(context, 1, exactArgs); err != nil {
-			return err
-		}
 		// XXX: Currently this is untested with rootless containers.
 		if isRootless() {
 			return fmt.Errorf("runc restore requires root")
